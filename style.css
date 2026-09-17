@@ -1,0 +1,449 @@
+/* mikefell.co.uk
+   Ground: the cool grey of a blank cassette inlay card.
+   Ink: the warm near-black of ferric tape.
+   The photographs supply the colour; the page stays out of their way. */
+
+:root {
+  --ground:   #e6e9ea;
+  --ground-2: #dce0e1;
+  --ink:      #16181a;
+  --ink-soft: #565d61;
+  --rule:     #c0c6c7;
+  --oxide:    #8a3a18;
+  --tape:     #241f1c;
+
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Literata", Georgia, "Times New Roman", serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --gutter: clamp(1.25rem, 5vw, 4rem);
+  --wrap: 64rem;
+  --narrow: 38rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground:   #131617;
+    --ground-2: #1b1f20;
+    --ink:      #e2e6e6;
+    --ink-soft: #949c9f;
+    --rule:     #2e3436;
+    --oxide:    #d9743f;
+    --tape:     #c9cfd0;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: clamp(1rem, 0.96rem + 0.2vw, 1.075rem);
+  line-height: 1.62;
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap { max-width: var(--wrap); margin-inline: auto; padding-inline: var(--gutter); }
+.wrap.narrow { max-width: var(--narrow); }
+
+.mono {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+}
+
+.dim { color: var(--ink-soft); }
+
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+a:hover { text-decoration-color: var(--oxide); color: var(--oxide); }
+
+:focus-visible {
+  outline: 2px solid var(--oxide);
+  outline-offset: 3px;
+  border-radius: 1px;
+}
+
+.skip {
+  position: absolute; left: -9999px;
+  background: var(--ink); color: var(--ground);
+  padding: 0.6rem 1rem; font-family: var(--mono); font-size: 0.8rem; z-index: 10;
+}
+.skip:focus { left: 0.5rem; top: 0.5rem; }
+
+/* ------------------------------------------------------------- masthead */
+
+.masthead { padding-block: clamp(1.5rem, 4vw, 2.75rem) 0; }
+
+.masthead .wrap {
+  display: flex; flex-wrap: wrap; gap: 1rem 2rem;
+  align-items: baseline; justify-content: space-between;
+}
+
+.wordmark { text-decoration: none; display: block; }
+.wordmark:hover { color: inherit; }
+.wordmark-name {
+  display: block;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1.32rem;
+  letter-spacing: -0.02em;
+}
+.wordmark:hover .wordmark-name { color: var(--oxide); }
+.wordmark-role {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+  margin-top: 0.15rem;
+}
+
+.masthead nav {
+  display: flex; flex-wrap: wrap; gap: 0.35rem 1.35rem;
+  font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.02em;
+}
+.masthead nav a { text-decoration: none; padding-bottom: 2px; border-bottom: 1px solid transparent; }
+.masthead nav a:hover { border-bottom-color: var(--oxide); }
+.masthead nav a[aria-current="page"] { border-bottom-color: var(--ink); }
+.masthead nav a[aria-current="page"]:hover { border-bottom-color: var(--oxide); }
+
+/* ---------------------------------------------------------------- rules */
+
+/* The tape: a single dark line, the way it sits on the board. */
+.rule.tape {
+  height: 2px;
+  background: var(--tape);
+  margin-block: clamp(2rem, 5vw, 3.25rem);
+}
+
+/* ----------------------------------------------------------------- lede */
+
+.lede { padding-top: clamp(2.5rem, 8vw, 5.5rem); }
+
+.statement {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(2.1rem, 1.2rem + 4.2vw, 4rem);
+  line-height: 1.02;
+  letter-spacing: -0.032em;
+  margin: 0 0 1.75rem;
+  max-width: 19ch;
+  text-wrap: balance;
+}
+
+.lede p {
+  max-width: var(--narrow);
+  margin: 0 0 1.1rem;
+}
+.lede p:last-child { margin-bottom: 0; }
+
+/* ------------------------------------------------------------ page head */
+
+.page-head { padding-top: clamp(1.75rem, 5vw, 3.5rem); }
+
+.page-head h1 {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(1.9rem, 1.2rem + 2.8vw, 3.1rem);
+  line-height: 1.05;
+  letter-spacing: -0.028em;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.page-head p { max-width: var(--narrow); }
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0 0.85rem;
+}
+.eyebrow a { text-decoration: none; }
+.eyebrow a:hover { color: var(--oxide); }
+.eyebrow .dot { margin-inline: 0.5em; }
+
+/* The transduction line: what goes in, what comes out.
+   Every project here converts one kind of signal into another. */
+.trans {
+  font-family: var(--mono);
+  font-size: 0.86rem;
+  line-height: 1.5;
+  margin: 1.4rem 0 0;
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.55rem 0.8rem;
+  max-width: var(--narrow);
+}
+.trans b { color: var(--oxide); font-weight: 500; }
+.trans span:first-child { color: var(--ink-soft); }
+
+/* --------------------------------------------------------- theme blocks */
+
+.theme-block { margin-bottom: clamp(2.75rem, 6vw, 4.5rem); }
+
+.theme-block .eyebrow {
+  display: flex; align-items: baseline; gap: 0.9rem;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.7rem;
+  margin-bottom: 0;
+}
+.theme-block .count { margin-left: auto; color: var(--ink-soft); }
+@media (prefers-color-scheme: dark) {
+}
+
+.theme-note {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  max-width: var(--narrow);
+  margin: 1rem 0 0;
+}
+
+/* ---------------------------------------------------------------- index */
+
+.index { list-style: none; margin: 0; padding: 0; }
+
+.index a {
+  display: grid;
+  grid-template-columns: minmax(11rem, 17rem) 1fr auto;
+  align-items: baseline;
+  gap: 0.35rem 1.75rem;
+  padding: 0.95rem 0;
+  border-bottom: 1px solid var(--rule);
+  text-decoration: none;
+  transition: border-color 120ms ease;
+}
+.index a:hover { color: inherit; border-bottom-color: var(--oxide); }
+
+.idx-title {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 1.08rem;
+  letter-spacing: -0.012em;
+}
+.index a:hover .idx-title { color: var(--oxide); }
+
+.idx-trans {
+  color: var(--ink-soft);
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.3rem 0.6rem;
+  font-size: 0.76rem;
+}
+.idx-trans b { color: var(--oxide); font-weight: 500; }
+.idx-theme { color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.68rem; }
+
+@media (max-width: 42rem) {
+  .index a { grid-template-columns: 1fr; gap: 0.4rem; }
+}
+
+/* ---------------------------------------------------------------- prose */
+
+.prose { max-width: var(--narrow); }
+.prose > *:first-child { margin-top: 0; }
+
+.prose p { margin: 0 0 1.15rem; }
+
+.prose h2, .prose h3 {
+  font-family: var(--display);
+  font-weight: 700;
+  letter-spacing: -0.018em;
+  line-height: 1.2;
+  margin: 2.4rem 0 0.85rem;
+}
+.prose h2 { font-size: 1.38rem; }
+.prose h3 { font-size: 1.12rem; }
+
+.prose ul, .prose ol { margin: 0 0 1.15rem; padding-left: 1.15rem; }
+.prose li { margin-bottom: 0.4rem; }
+
+.prose a { text-decoration-color: var(--rule); }
+
+.prose blockquote {
+  margin: 1.6rem 0;
+  padding-left: 1.1rem;
+  border-left: 2px solid var(--oxide);
+  color: var(--ink-soft);
+}
+
+.prose code {
+  font-family: var(--mono);
+  font-size: 0.86em;
+  background: var(--ground-2);
+  padding: 0.1em 0.35em;
+}
+
+.prose hr { border: 0; border-top: 1px solid var(--rule); margin: 2.2rem 0; }
+
+figure { margin: 2rem 0; }
+figure img { width: 100%; height: auto; display: block; background: var(--ground-2); }
+figcaption {
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  color: var(--ink-soft);
+  margin-top: 0.6rem;
+  line-height: 1.5;
+}
+
+/* ---------------------------------------------------------------- facts */
+
+.facts {
+  display: grid;
+  grid-template-columns: minmax(5.5rem, auto) 1fr;
+  gap: 0.5rem 1.5rem;
+  margin: 2.75rem 0 0;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--rule);
+  max-width: var(--narrow);
+}
+.facts dt { color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.7rem; padding-top: 0.12rem; }
+.facts dd { margin: 0; }
+
+/* ---------------------------------------------------------------- pager */
+
+.pager {
+  display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: space-between;
+  margin: 3.5rem 0 0;
+  padding-top: 1.4rem;
+  border-top: 2px solid var(--tape);
+  max-width: var(--narrow);
+}
+.pager a {
+  text-decoration: none;
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 1rem;
+  max-width: 48%;
+}
+.pager .next { text-align: right; margin-left: auto; }
+.pager a span {
+  display: block;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.68rem;
+  margin-bottom: 0.25rem;
+}
+.pager a:hover { color: var(--oxide); }
+
+/* --------------------------------------------------------------- plates */
+
+.plates {
+  column-width: 15rem;
+  column-gap: 1.1rem;
+  margin-top: 2.5rem;
+}
+
+.plate {
+  display: block;
+  break-inside: avoid;
+  margin: 0 0 1.1rem;
+  padding: 0;
+  width: 100%;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: zoom-in;
+}
+.plate img {
+  width: 100%; height: auto; display: block;
+  background: var(--ground-2);
+  transition: opacity 140ms ease;
+}
+.plate:hover img { opacity: 0.86; }
+.plate-cap {
+  display: block;
+  color: var(--ink-soft);
+  margin-top: 0.45rem;
+  font-size: 0.72rem;
+}
+.plate:hover .plate-cap { color: var(--oxide); }
+
+/* ------------------------------------------------------------- lightbox */
+
+#lightbox {
+  border: 0; padding: 0;
+  background: var(--ground);
+  color: var(--ink);
+  max-width: min(94vw, 78rem);
+  max-height: 94vh;
+  overflow: auto;
+}
+#lightbox::backdrop { background: rgb(10 12 12 / 0.88); }
+#lightbox img { display: block; max-width: 100%; max-height: 82vh; margin-inline: auto; height: auto; }
+#lb-cap { margin: 0.8rem 1rem 1.2rem; color: var(--ink-soft); text-align: center; }
+.lb-close {
+  position: sticky; top: 0; margin-left: auto; display: block;
+  background: var(--ground); color: var(--ink-soft);
+  border: 0; padding: 0.7rem 1rem;
+  font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.1em;
+  text-transform: uppercase; cursor: pointer;
+}
+.lb-close:hover { color: var(--oxide); }
+
+/* ---------------------------------------------- the choir's own controls */
+
+.choir { margin: 2rem 0; }
+.choir img { width: 100%; max-width: 26rem; height: auto; display: block; margin-bottom: 1.4rem; }
+.choir-controls { display: flex; gap: 0.75rem; }
+.choir-controls button {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  padding: 0.65rem 1.5rem;
+  background: none;
+  color: var(--ink);
+  border: 2px solid var(--tape);
+  cursor: pointer;
+}
+.choir-controls button:hover { border-color: var(--oxide); color: var(--oxide); }
+
+/* --------------------------------------------------------------- footer */
+
+.footer {
+  margin-top: clamp(4rem, 10vw, 7rem);
+  padding-block: 2rem 3rem;
+  border-top: 1px solid var(--rule);
+}
+.footer p { margin: 0 0 0.4rem; color: var(--ink-soft); }
+.footer a { text-decoration-color: var(--rule); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
+
+/* ---------------------------------------------------------------- video */
+
+.video {
+  margin: 2rem 0;
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: var(--ground-2);
+}
+.video iframe { width: 100%; height: 100%; border: 0; display: block; }
+.video button {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  padding: 0; border: 0;
+  background: none; cursor: pointer;
+  display: grid; place-items: center;
+  color: var(--ink);
+}
+.video button img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover;
+}
+.video button span {
+  position: relative;
+  background: var(--ground);
+  border: 2px solid var(--tape);
+  padding: 0.6rem 1.35rem;
+  font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.12em;
+}
+.video button:hover span { border-color: var(--oxide); color: var(--oxide); }
