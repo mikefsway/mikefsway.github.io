@@ -1,0 +1,46 @@
+# Mike Fell
+
+> Mike Fell (Michael J. Fell) is a Principal Research Fellow at the UCL Energy Institute and a researcher co-investigator in the UKRI Energy Demand Research Centre. His research asks who is able to benefit from a flexible, low-carbon energy system, on what terms, and how developments in AI might come to affect this.
+
+## Research
+
+- [Flexibility and fairness](https://mikefell.co.uk/research/#flexibility): Who is able to shift their energy use, who gains when they do, and on what terms.
+- [AI agents and energy](https://mikefell.co.uk/research/#ai-agents): AI agents that act for households in the energy system, and how people stay in charge of them.
+- [Local and peer-to-peer energy](https://mikefell.co.uk/research/#local-energy): How people might buy, sell and share electricity locally, and what they want from those arrangements.
+- [Methods and open research](https://mikefell.co.uk/research/#methods): Realist evidence synthesis, transparent and reproducible research, open science, and games in research.
+- [Community Energy Explorer](https://mikefell.co.uk/community-energy-map/): A map of community energy organisations in England against deprivation, community infrastructure and grid capacity.
+- [Should I Bake?](https://mikefell.co.uk/should-i-bake/): A site using the Carbon Intensity API to show when Great Britain's electricity is coming mostly from renewables.
+
+## Personal projects
+
+- [Fraglets](https://mikefell.co.uk/fraglets/): Short, structured descriptions of your tastes that you control, and can share with services and AI agents.
+- [KarbonKit](https://mikefell.co.uk/karbonkit/): Heat pump, solar and battery tools that other websites can embed, using real UK property data.
+- [MostMaker](https://mikefell.co.uk/mostmaker/): Recommendations for London restaurants, gigs and theatre, matched to your taste.
+- [Sing Lupa](https://mikefell.co.uk/sing-lupa/): Sketch musical ideas by singing them, then grow the loop into a song. Free, in the browser.
+- [The Inhuman Gallery](https://mikefell.co.uk/the-inhuman-gallery/): Seventeen works made for machine readers, hung in five rooms.
+- [Pump:chic](https://mikefell.co.uk/pump-chic/): A website of tools and resources for imagining what it would be like to live with a heat pump.
+- [Without Fire](https://mikefell.co.uk/without-fire/): A wood-burning stove simulator based around a Raspberry Pi.
+- [Butterfly display](https://mikefell.co.uk/butterfly-display/): A butterfly whose wings open when the weather is good for a butterfly survey.
+- [Portrait that watches the grid](https://mikefell.co.uk/renewable-portrait/): A portrait that smiles or frowns depending on renewable generation and the Octopus Agile price.
+- [Universal analogue meter](https://mikefell.co.uk/universal-analogue-meter/): An analogue meter with an e-ink display that can be set to any scale.
+- [The Mechanical Choir](https://mikefell.co.uk/mechanical-choir/): A choir made up of Amazon Mechanical Turk workers, each paid a dollar to sing a few words of Amazing Grace.
+- [Grid Music](https://mikefell.co.uk/grid-music/): UK national electricity use data presented as sound.
+- [Tape drawings](https://mikefell.co.uk/tape-drawings/): Drawings made with old cassette tapes nailed to board.
+
+## Selected publications
+
+Publishes as Michael J. Fell. Full list at https://mikefell.co.uk/publications/.
+
+- Energy services: A conceptual review (2017). *Energy Research & Social Science*. https://doi.org/10.1016/j.erss.2017.02.010
+- Flexibility Capital and Flexibility Justice in Smart Energy Systems (2019). *Energy Research and Social Science*. https://doi.org/10.1016/j.erss.2019.03.015
+- Just flexibility? (2019). *Nature Energy*. https://doi.org/10.1038/s41560-019-0510-3
+- Public acceptability of domestic demand-side response in Great Britain: The role of automation and direct load control (2015). *Energy Research and Social Science*. https://doi.org/10.1016/j.erss.2015.08.023
+- Consumer demand for time of use electricity tariffs: A systematized review of the empirical evidence (2018). *Renewable and Sustainable Energy Reviews*. https://doi.org/10.1016/j.rser.2018.08.040
+- Realist approaches in energy research to support faster and fairer climate action (2022). *Nature Energy*. https://doi.org/10.1038/s41560-022-01093-8
+- Peer-to-peer electricity trading and the sharing economy: social, markets and regulatory perspectives (2022). *Energy Sources, Part B: Economics, Planning, and Policy*. https://doi.org/10.1080/15567249.2022.2050849
+- Smart energy must address enshittification risks (2026). *Nature Energy*. https://doi.org/10.1038/s41560-026-02138-y
+
+## Other
+
+- [Publications](https://mikefell.co.uk/publications/): 84 items, from ORCID
+- [About](https://mikefell.co.uk/about/): biography, roles, contact
